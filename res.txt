@@ -1,0 +1,3 @@
+https://materializecss.com - тут позаимствовали стили материал-дезигн
+https://realfavicongenerator.net - тут сделали иконки для всех браузеров одним разом
+https://material.io/tools/icons/ - тут смотреть иконки
