@@ -9,6 +9,6 @@
   <title>Quiz</title>
 </head>
 <body>
-<h1>Hello Quizzzz!</h1>
+<h1>Hello Quiz!</h1>
 </body>
 </html>
