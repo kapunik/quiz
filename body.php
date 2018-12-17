@@ -39,7 +39,7 @@
 </section>
 
 <section class="main">
-  <h1 class="round_number">Раунд 1. Как-то называется</h1>
+  <h1 class="round_number">Раунд 1. Разминка</h1>
 
   <div class="round_discription">
     Условия первого раунда. Количество вопросов, время на раздумья, и тыр-пыр
