@@ -30,8 +30,8 @@
     <script>
    //Объявим переменную
    var stopTimer;
-   
-   //Функция для старта 
+
+   //Функция для старта
    function testTimer(startTime) {
      //для повторного запуска очистим rezult
      document.getElementById("rezult").innerHTML = '';
@@ -69,7 +69,7 @@
      bot.appendChild(text);
     }
    }
-   
+
    //Функция для остановки обратного отчета
    function stop(){
 	//очистим переменную с таймером
@@ -79,16 +79,15 @@
 	bot.removeAttribute("disabled","disabled");
    }
    </script>
-   
+
    <p id = "time"></p>
    <button id = "bot" onclick="testTimer (180)">Начать</button>
    <button  onclick="stop ()">Остановить</button>
    <p id = "rezult">
-   </p>  
-  
+   </p>
+
 </div>
 <div class="footer">
 </div>
 </body>
 </html>
-
