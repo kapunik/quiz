@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="templates.css"/>
+<meta charset="utf-8" />
+
+<title></title>
+</head>
+<body>
+<h1>Номер вопроса</h1>
+<div class="question">
+	<p>В вольном пересказе стихи аббата Делиля об этом выглядят так: "Аббат любил делать это самостоятельно. Сначала их золото он превращал в цвет черного дерева, затем заставлял их кричать под железными зубцами,
+ после чего погружал в воду. И уж затем, также в одиночестве, получал наслаждение". От чего же он получал наслаждение?</p>
+</div>
+<div class="answer">
+	<table>
+		<tr>
+    		<td><p>Первый ответ Первый ответ Первый ответ Первый ответ</p></td>
+    		<td><p>Второй ответ Второй ответ Второй ответ Второй ответ</p></td>
+  		</tr>
+  		<tr>
+    		<td><p>Третий ответ Третий ответ Третий ответ Третий ответ</p></td>
+    		<td><p>Четвертый ответ Четвертый ответ Четвертый ответ Четвертый ответ</p></td>
+  		</tr>
+	</table>
+
+</div>
+<div class="time">
+
+    <script>
+   //Объявим переменную
+   var stopTimer;
+
+   //Функция для старта
+   function testTimer(startTime) {
+     //для повторного запуска очистим rezult
+     document.getElementById("rezult").innerHTML = '';
+     //выключим кнопку запуска
+     var bot = document.getElementById("bot");
+     bot.setAttribute("disabled","");
+     //сколько будет длиться обратный отчет
+     var time = startTime;
+     //определим сколько минут
+     var min = parseInt(time / 60);
+     if ( min < 1 ) min = 0;
+	time = parseInt(time - min * 60);
+     if ( min < 10 ) min = '0'+min;
+     //определим сколько секунд
+     var seconds = time;
+     if ( seconds < 10 ) seconds = '0'+seconds;
+     //отрисовываем время
+     document.getElementById("time").innerHTML='<span>Осталось: '+min+' мин '+seconds+' секунд</span>';
+     //уменьшаем общее время на одну секунду
+     startTime--;
+     //смотрим время не закончилось
+     if ( startTime  >= 0 ) {
+		//если нет, то повторяем процедуру заново
+       stopTimer  =  setTimeout(function(){testTimer(startTime); }, 1000);
+	   //если закончилось, то выводим сообщение на экран, и делаем кнопку запуска активной
+   } else {
+     document.getElementById("time").innerHTML='<span>Осталось: 00 мин 00 секунд</span>';
+     var rezult = document.getElementById("rezult");
+     rezult.innerHTML ="Время вышло";
+     clearTimeout(stopTimer);
+     var bot = document.getElementById("bot");
+     bot.removeAttribute("disabled","disabled");
+     bot.removeChild(bot.childNodes[0]);
+     var text = document.createTextNode("Начать заново");
+     bot.appendChild(text);
+    }
+   }
+
+   //Функция для остановки обратного отчета
+   function stop(){
+	//очистим переменную с таймером
+	clearTimeout(stopTimer);
+	//и включим кнопку запуска
+	var bot = document.getElementById("bot");
+	bot.removeAttribute("disabled","disabled");
+   }
+   </script>
+
+   <p id = "time"></p>
+   <button id = "bot" onclick="testTimer (180)">Начать</button>
+   <button  onclick="stop ()">Остановить</button>
+   <p id = "rezult">
+   </p>
+
+</div>
+<div class="footer">
+</div>
+</body>
+</html>
