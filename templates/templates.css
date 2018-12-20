@@ -1,6 +1,6 @@
 body
 {
-	margin 0 auto;
+	margin: 0 auto;
 }
 h1
 {
@@ -9,8 +9,7 @@ h1
 }
 .question
 {
-	text-align:center;
-	margin: 10% 10% 10% 10%;	 
+	margin: 10% 10% 10% 10%;
 }
 p
 {
@@ -21,6 +20,8 @@ p
 	margin-top: 10%;
 	text-align:center;	
 }
-.footer {
-  flex: 0 0 auto;
+}
+.footer 
+{
+        flex: 0 0 auto;
 }
