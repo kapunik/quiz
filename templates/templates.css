@@ -9,19 +9,24 @@ h1
 }
 .question
 {
-	margin: 10% 10% 10% 10%;
+	margin: 5% 10% 1% 10%;
 }
 p
 {
 	font-size: 30pt;
 }
-.time
+.answer
 {
-	margin-top: 10%;
+	 margin: 1% 10% 1% 10%;
+}
+
+.time
+{	
+	 margin:5% 30% 0 25%;
 	text-align:center;	
 }
 }
 .footer 
 {
-        flex: 0 0 auto;
+      flex: 0 0 auto;
 }
