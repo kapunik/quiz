@@ -62,9 +62,12 @@ $sql_crate_Teams = "CREATE TABLE `Teams` (
 
 $sql_insert_Geme = 'INSERT INTO `games`(`number`, `date`, `teams`, `rounds`, `score`) VALUES (2, "2019-01-3", "1,2,3,4", "1,2,3", "0,0,0,0");';
 
+$sql_array = array($sql_crate_Games, $sql_crate_Rounds, $sql_crate_Questions, $sql_crate_Answers, $sql_crate_Teams, $sql_insert_Geme);
 
-if($mysqli->query($sql_insert_Geme) === TRUE){
-  printf("успешно");
-} else {
-  printf("Не удалось выполнить запрос: %s\n", $mysqli->connect_error);
-};
+for ($i = 0; $i < 6; $i++){
+  if($mysqli->query($sql_array[$i]) === TRUE){
+    printf("успешно");
+  } else {
+    printf("Не удалось выполнить запрос: %s\n", $mysqli->connect_error);
+  };
+}

@@ -1,4 +1,0 @@
-
-http://php.net/manual/ru/mysqli.query.php - запросы к БД
-
-http://php.net/manual/ru/mysqli.quickstart.prepared-statements.php - работа с подготовленными запросами

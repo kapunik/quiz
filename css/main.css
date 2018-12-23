@@ -3,7 +3,7 @@ html, body{
   height: 100%;
 }
 body{
-  background-color: rgb(33, 33, 33);
+  background: linear-gradient(90deg, rgba(19, 1, 33,1) 20.181414714494878%,rgba(18, 1, 32,1) 20.181414714494878%,rgba(0, 36, 30,1) 80.18324487554904%);
   color: white;
   display: flex;
 }
@@ -16,21 +16,79 @@ body{
 }
 
 .aside{
-  background-color: rgb(40, 40, 40);
-  width: 33%;
-  max-width: 33%;
+  /* background-color: rgb(40, 40, 40); */
+  width: 20%;
+  max-width: 20%;
+  height: auto;
+  font-size: 1vw;
 }
 
 .team_info{
+  position: relative;
   width: 90%;
   margin: 10px auto;
+  background-color: rgba(61, 61, 61, .3);
+  padding: 10px;
+  border-radius: 5px;
+}
+.taem_info__title{
+    font-size: 1.1vw;
+    line-height: 1.1vw;
 }
 .main{
-  width: 65%;
-  max-width: 65%
+  width: 79%;
+  max-width: 79%
 }
 
 .round_discription{
   margin: 30px;
-  font-size: 30px;
+  font-size: 2vw;
+}
+
+.star{
+  font-size: 2vw;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.star-gold{
+
+  color: gold;
+}
+
+.star-silver{
+  color: silver;
+}
+
+.star-bronze{
+  color: #cd7f32;
+}
+
+.rond__short_info,
+.rond__short_info span,
+.rond__short_info span > i{
+  line-height: 1.5vw;
+  font-size: 1.5vw;
+  vertical-align: top;
+}
+
+.rond__short_info{
+  width: 100%;
+  text-align: center;
+}
+.rond__short_info span{
+  margin: 3%;
+}
+
+.short_info__questions{
+  color: rgb(0, 255, 140);
+}
+
+.short_info__timer{
+  color: rgb(95, 199, 52);
+}
+
+.short_info__rewards{
+  color: rgb(178, 198, 21);
 }

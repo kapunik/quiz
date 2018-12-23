@@ -1,3 +1,8 @@
 https://materializecss.com - тут позаимствовали стили материал-дезигн
 https://realfavicongenerator.net - тут сделали иконки для всех браузеров одним разом
 https://material.io/tools/icons/ - тут смотреть иконки
+
+http://php.net/manual/ru/mysqli.query.php - запросы к БД
+http://php.net/manual/ru/mysqli.quickstart.prepared-statements.php - работа с подготовленными запросами
+
+https://learn.javascript.ru/css-units - про размеры шрифтов
