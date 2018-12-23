@@ -2,10 +2,10 @@
     width: 6px;
 }
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.75);
 }
 ::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.75);
 }
 
 html, body{
@@ -13,7 +13,9 @@ html, body{
   height: 100%;
 }
 body{
-  background: linear-gradient(90deg, rgba(19, 1, 33,1) 20.181414714494878%,rgba(18, 1, 32,1) 20.181414714494878%,rgba(0, 36, 30,1) 80.18324487554904%);
+  /* background: linear-gradient(90deg, rgba(19, 1, 33,1) 20.181414714494878%,rgba(18, 1, 32,1) 20.181414714494878%,rgba(0, 36, 30,1) 80.18324487554904%); */
+  background-image: url(../img/wallhaven-629225.jpg);
+  background-size: cover;
   color: white;
   display: flex;
 }
@@ -37,7 +39,7 @@ body{
   position: relative;
   width: 90%;
   margin: 10px auto;
-  background-color: rgba(61, 61, 61, .3);
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 10px;
   border-radius: 5px;
 }
@@ -54,8 +56,12 @@ body{
 .round_discription,
 .question_description{
   text-align: justify;
-  margin: 30px;
+  margin: 1%;
   font-size: 3.5vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  width: 98%;
+  padding: 1%;
 }
 
 .star{
@@ -112,6 +118,7 @@ body{
   flex-wrap: wrap;
   width: 100%;
   height: auto;
+
 }
 .answer{
   width: 50%;
@@ -121,7 +128,7 @@ body{
   padding: 1%;
   margin: 1%;
   flex: 1;
-  background-color: rgba(99, 99, 99, .3);
+  background-color: rgba(0, 0, 0, 0.75);
   border-radius: 5px;
   font-size: 3vh;
 }
