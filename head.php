@@ -1,4 +1,6 @@
-
+<?php
+include_once 'brain/classes.php';
+ ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
