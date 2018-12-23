@@ -20,9 +20,12 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=cyrillic" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+<script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+
   <!--  наши стили и скрипты -->
   <link rel="stylesheet" href="css/main.css?a=<?php echo time(); ?>">
   <script src="js/main.js?a=<?php echo time(); ?>" charset="utf-8"></script>
+
 
   <title>Quiz</title>
 </head>
