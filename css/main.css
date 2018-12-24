@@ -8,6 +8,10 @@
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.75);
 }
 
+.page404{
+  font-size: 15vh;
+  margin: auto;
+}
 html, body{
   width: 100%;
   height: 100%;

@@ -1,13 +1,3 @@
 <?php
-include_once 'head.php';
- ?>
-
- <?php
- include_once 'body.php';
-  ?>
-
-
-
-<?php
-include_once 'footer.php';
- ?>
+ini_set('display_errors', 1);
+require_once 'application/bootstrap.php';

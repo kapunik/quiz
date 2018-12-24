@@ -1,7 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kapun
- * Date: 25.12.2018
- * Time: 0:24
- */
+require_once 'brain/model.php';
+require_once 'brain/view.php';
+require_once 'brain/controller.php';
+require_once 'brain/route.php';
+Route::start(); // запускаем маршрутизатор
