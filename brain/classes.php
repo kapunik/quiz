@@ -13,12 +13,13 @@ class question
   public $timer;
   public $type;
 
-  function __construct($number, $description){
+  function __construct($number, $description, $round){
     $this->number = $number;
     $this->description = $description;
+    $this->round = $round;
   }
   public function show(){
-    echo "<h4>Вопрос № $this->number</h4>";
+    echo "<h4>Раунд $this->round > Вопрос № $this->number</h4>";
     echo "<div class='question_description'>$this->description</div>";
   }
 

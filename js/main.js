@@ -14,4 +14,10 @@ $('#roundStart').on('click', function(){
 
 });
 
+$('#btn_hide_aside').on('click', function(){
+  $('.aside').toggleClass('flatten');
+  // $('.aside').slideToggle();
+  $('#btn_hide_aside').toggleClass('rotate180');
+});
+
 });

@@ -1,5 +1,10 @@
 <body>
+  <button id="btn_hide_aside" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">arrow_back</i></button>
+
 <section class="aside">
+
+
+
   <div class="team_info">
     <i class="material-icons star star-gold">stars</i>
     <div class="taem_info__title">

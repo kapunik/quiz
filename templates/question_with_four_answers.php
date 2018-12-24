@@ -14,10 +14,8 @@ $answers = [
 
 ?>
 
-<h3>Раунд 1</h3>
-
 <?php
-$question = new question($number, $description);
+$question = new question($number, $description, 1);
 $question->show();
 ?>
 
