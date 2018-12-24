@@ -3,7 +3,7 @@
 /**
  *
  */
-class question
+class Question
 {
 
   public $id;
@@ -24,7 +24,7 @@ class question
 
 };
 
-class answer
+class Answer
 {
   public $number;
   public $description;

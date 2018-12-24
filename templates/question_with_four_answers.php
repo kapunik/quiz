@@ -1,5 +1,5 @@
 <?php
-include_once '../brain/classes.php';
+include_once '../application/brain/classes.php';
 
 $number = 8;
 
