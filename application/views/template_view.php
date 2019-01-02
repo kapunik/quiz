@@ -16,6 +16,7 @@
     <!--  материал стили и скрипты-->
     <link rel="stylesheet" href="/css/materialize.css">
     <script src="/js/materialize.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
