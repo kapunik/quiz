@@ -62,11 +62,22 @@ $sql_crate_Teams = "CREATE TABLE `Teams` (
 
 $sql_insert_Geme = 'INSERT INTO `games`(`number`, `date`, `teams`, `rounds`, `score`) VALUES (2, "2019-01-3", "1,2,3,4", "1,2,3", "0,0,0,0");';
 
-$sql_array = array($sql_crate_Games, $sql_crate_Rounds, $sql_crate_Questions, $sql_crate_Answers, $sql_crate_Teams, $sql_insert_Geme);
 
-for ($i = 0; $i < 6; $i++){
+
+$sql_1 = "INSERT INTO `questions` (`number`, `round`, `description`, `timer`, `type`) VALUES (3, 1, 'У какой птицы глаз по размерам больше чем мозг?', 60, 'four_answers');";
+$sql_2 = "INSERT INTO `questions` (`number`, `round`, `description`, `timer`, `type`) VALUES (4, 1, 'Что из перечисленного Кот Матроскин не предъявлял в качестве своих документов?', 60, 'four_answers');";
+$sql_3 = "INSERT INTO `questions` (`number`, `round`, `description`, `timer`, `type`) VALUES (5, 1, 'Куда согласно пословице ведут все дороги?', 60, 'four_answers');";
+$sql_4 = "INSERT INTO `questions` (`number`, `round`, `description`, `timer`, `type`) VALUES (6, 1, 'Какое из перечисленных государств действительно существует?', 60, 'four_answers');";
+$sql_5 = "INSERT INTO `questions` (`number`, `round`, `description`, `timer`, `type`) VALUES (7, 1, 'Что находится внутри теннисного мяча?', 60, 'four_answers');";
+$sql_6 = "INSERT INTO `questions` (`number`, `round`, `description`, `timer`, `type`) VALUES (8, 1, 'Какой колючий кустарник дал название кисло-сладким леденцам?', 60, 'four_answers');";
+$sql_7 = "INSERT INTO `questions` (`number`, `round`, `description`, `timer`, `type`) VALUES (9, 1, 'Какие племена жили в Европе, а не в Северной Америке?', 60, 'four_answers');";
+$sql_8 = "INSERT INTO `questions` (`number`, `round`, `description`, `timer`, `type`) VALUES (10, 1, 'Как называется специальный сосуд, придуманный Пифагором?', 60, 'four_answers');";
+
+$sql_array = array($sql_1, $sql_2, $sql_3, $sql_4, $sql_5,$sql_6,$sql_7, $sql_8);
+
+for ($i = 0; $i < 8; $i++){
   if($mysqli->query($sql_array[$i]) === TRUE){
-    printf("успешно");
+    printf("успешно \n");
   } else {
     printf("Не удалось выполнить запрос: %s\n", $mysqli->connect_error);
   };
