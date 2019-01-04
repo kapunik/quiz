@@ -5,41 +5,50 @@
 echo "
 <section class='game_title'>
     <h1>Игра № <span class='tomato'>{$data['game_number']}</span></h1>
-    <h3 class='game_title__author'>Товарищ Валдис-Пельшер - <span class='tomato'>{$data['game_author']}</span></h3>
-    <div class='line_decoration line_decoration-horisontal'>_</div>
-    
+    <h2 class='game_title__author'>Товарищ Валдис-Фельшер - <span class='tomato'>{$data['game_author']}</span></h2>
+       
     <div class='flex_row'>
         <div class='round_list'>
-            <h4>Раундов: <span class='tomato'>".count($data['game_rounds'])."</span></h4>
-        <div class='flex_wrap'>   
+            <h3>Раундов: <span class='tomato'>".count($data['game_rounds'])."</span></h3>
+        <div>   
  ";
+    echo "
+    <table>
+        <thead>
+            <tr>
+                <th colspan='3'>Описание раунда</th>
+                <th class='short_info__questions'><span class='icon-answer'></span> Кол-&nbsp;во</th>
+                <th class='short_info__timer'><span class='icon-timer'></span> Cек</th>
+                <th class='short_info__rewards'><span class='icon-star'></span> Баллов</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+       
+    ";
 foreach ($data['game_rounds'] as $game_round){
     echo "
-            <div class='card darken-transparent'>
-                <div class='card-content white-text' style='flex:1'>
-                    <span class='card-title'>Раунд № {$game_round['number']} <span class='tomato'>{$game_round['name']}</span></span>
-                    <p style='flex:1'>{$game_round['description']}</p>
-                </div>
-                <div class='rond__short_info card-action'>
-                  <span class='short_info__questions'>
-                    <i class='material-icons'> assignment </i> 10 вопросов
-                  </span>
-                        <span class='short_info__timer'>
-                    <i class='material-icons'> timer </i> 30 сек
-                  </span>
-                        <span class='short_info__rewards'>
-                    <i class='material-icons'> star </i> {$game_round['rewards']}
-                  </span>
-                </div>                
-            </div>
+
+            <tr><td colspan='6'><img src='/img/border2.png'></td></tr>
+            <tr>
+                <td>№ {$game_round['number']}</td>
+                <td><span class='tomato'>{$game_round['name']}</span></td>
+                <td style='width: 45%'>{$game_round['description']}</td>
+                <td class='short_info__questions'>10</td>
+                <td class='short_info__timer'>60</td>
+                <td class='short_info__rewards'>{$game_round['rewards']}</td>
+            </tr>
          ";
 };
-echo "  
+echo "   </tbody>
+    </table>
         </div> 
     </div>     
-        <div class='line_decoration line_decoration-vertical'>|</div>
+    <div class='flex-column'>
+    
+   
         <div class='teams_list'>
-        <h4>Команд: <span class='tomato'>".count($data['game_teams'])."</span></h4>
+        <h3>Команд: <span class='tomato'>".count($data['game_teams'])."</span></h3>
     ";
 
 foreach ($data['game_teams'] as $key => $value){
@@ -49,6 +58,10 @@ foreach ($data['game_teams'] as $key => $value){
     ";
 }
 echo "
+</div> 
+
+<div id='add_team'><span class='tomato'>+<span> Добавить команду </div>
+<div class='play play_round'><span class='icon-play'></span></div>
         </div>
     </div>
     
