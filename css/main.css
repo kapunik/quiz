@@ -30,6 +30,62 @@
 ::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.75);
 }
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+body{
+  /* background: linear-gradient(90deg, rgba(75, 209, 171,1) 20.5625%,rgba(75, 208, 171,1) 20.5625%,rgba(91, 0, 237,1) 80.5625%); */
+  background-image: url(../img/mel.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+}
+.aside, .main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 95%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 1%;
+  transition: all .2s linear;
+}
+
+.aside{
+  /* background-color: rgb(40, 40, 40); */
+  width: 20%;
+  max-width: 20%;
+  font-size: 2vh;
+}
+
+#btn_hide_aside{
+  position: absolute;
+  top: -48px;
+  left: 1%;
+
+}
+
+#btn_hide_aside:hover {
+  top: 1px;
+}
+.flatten{
+  transform: translateX(-100%);
+  width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.flatten div{
+  display: none;
+}
+.rotate180{
+  transform:rotate(180deg);
+}
+
 .hello{
   width: 100%;
   font-family: 'Fredericka the Great', cursive;
@@ -114,66 +170,70 @@
   border: 4px solid tomato;
   border-radius: 50%;
 }
-
+.sticker a{
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
 .page404{
   font-size: 15vh;
   margin: auto;
 }
-html, body{
+
+.game_title{
+  font-family: Lcchalk;
+  color: #d4e157;
   width: 100%;
-  height: 100%;
+  text-align: center;
 }
-body{
-  /* background: linear-gradient(90deg, rgba(75, 209, 171,1) 20.5625%,rgba(75, 208, 171,1) 20.5625%,rgba(91, 0, 237,1) 80.5625%); */
-  background-image: url(../img/mel.jpeg);
-  background-size: cover;
-  background-attachment: fixed;
+.tomato{
+  color: tomato;
+}
+
+.line_decoration {
   color: white;
-  display: flex;
+
 }
-.aside, .main{
+.line_decoration-horisontal{
+  width: 100%;
+  transform: scaleX(90);
+}
+.line_decoration-vertical{
+  height: 100%;
+  transform: scaleY(25) translateY(7px);
+}
+.flex_row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+ height: auto;
+}
+.flex_wrap{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.teams_list{
+  min-width: 35%;
+}
+.round_list .card{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 95%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  margin-left: 1%;
-  transition: all .2s linear;
+  width: 50%;
+  max-width: 50%;
+  min-width: 40%;
+  flex: 1;
+  margin: 5px;
+  font-family: Roboto;
 }
 
-.aside{
-  /* background-color: rgb(40, 40, 40); */
-  width: 20%;
-  max-width: 20%;
-  font-size: 2vh;
+.darken-transparent{
+  background-color: rgba(0, 0, 0, 0.5);
 }
-
-#btn_hide_aside{
-  position: absolute;
-  top: -48px;
-  left: 1%;
-
-}
-
-#btn_hide_aside:hover {
-  top: 1px;
-}
-.flatten{
-  transform: translateX(-100%);
-  width: 0%;
-  margin: 0;
-  padding: 0;
-}
-
-.flatten div{
-  display: none;
-}
-.rotate180{
-  transform:rotate(180deg);
-}
-
 
 .team_info{
   position: relative;
@@ -183,7 +243,7 @@ body{
   padding: 10px;
   border-radius: 5px;
 }
-.taem_info__title{
+.team_info__title{
     font-size: 2.5vh;
     line-height: 2.5vh;
 }

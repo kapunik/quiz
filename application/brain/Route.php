@@ -7,6 +7,7 @@ class Route
         // контроллер и действие по умолчанию
         $controller_name = 'Main';
         $action_name = 'index';
+        $action_mod = '';
 
         $routes = explode('/', $_SERVER['REQUEST_URI']);
 
@@ -20,6 +21,12 @@ class Route
         if ( !empty($routes[2]) )
         {
             $action_name = $routes[2];
+        }
+
+        // получаем переменную экшена
+        if ( !empty($routes[3]) )
+        {
+            $action_mod = $routes[3];
         }
 
         // добавляем префиксы
@@ -59,7 +66,7 @@ class Route
         if(method_exists($controller, $action))
         {
             // вызываем действие контроллера
-            $controller->$action();
+            $controller->$action($action_mod);
         }
         else
         {
@@ -69,7 +76,7 @@ class Route
 
     }
 
-    function ErrorPage404()
+    static function ErrorPage404()
     {
         $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
         header('HTTP/1.1 404 Not Found');

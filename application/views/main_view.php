@@ -12,6 +12,7 @@
                         <span class='sticker_date'>{$game['date']}</span>
                     
                     <span class='game_number'>{$game['number']}</span> {$game['author']}
+                    <a href='/game/show/{$game['number']}'></a>
                 </div>
                     ";
             };
