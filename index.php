@@ -8,4 +8,6 @@ function vardump($var) {
     echo '</pre>';
 }
 
+
 require_once 'application/bootstrap.php';
+

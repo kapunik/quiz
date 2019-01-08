@@ -1,3 +1,4 @@
+
 <section class="hello">
     <h1>Quiz</h1>
     <h2>Beer <i>&</i> Beard Bar</h2>
@@ -12,7 +13,7 @@
                         <span class='sticker_date'>{$game['date']}</span>
                     
                     <span class='game_number'>{$game['number']}</span> {$game['author']}
-                    <a href='/game/show/{$game['number']}'></a>
+                    <a href='/game/show/{$game['id']}'></a>
                 </div>
                     ";
             };
