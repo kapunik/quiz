@@ -1,0 +1,18 @@
+.games_list{
+    display: flex;
+
+}
+
+.games_list .mdl-card{
+    margin: 10px;
+}
+
+.mdl-card__iconPlusText i {
+    margin: 5px 10px 5px 0;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

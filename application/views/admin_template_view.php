@@ -26,6 +26,11 @@
     <link rel="stylesheet" href="/css/admin.css?a=<?php echo time(); ?>">
     <script src="/js/admin.js?a=<?php echo time(); ?>" charset="utf-8"></script>
 
+    <style>
+        #<?php echo $data['highlight_menu'];?>{
+        color: rgb(245,0,87) !important;
+        }
+    </style>
 
     <title>Quiz</title>
 </head>
@@ -34,27 +39,19 @@
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">Title</span>
+      <span class="mdl-layout-title"><?php echo $data['title'];?></span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="/admin/logout/">Выход</a>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="" title="Новый квиз"><i class="material-icons"> add_circle_outline </i></a>
+        <a class="mdl-navigation__link" href="/admin/" title="Кадендарь" id="events"><i class="material-icons"> dashboard </i></a>
+        <a class="mdl-navigation__link" href="" title="WTF?!"><i class="material-icons"> help_outline </i></a>
+        <a class="mdl-navigation__link" href="/admin/logout/" title="Выход"><i class="material-icons"> exit_to_app </i></a>
       </nav>
     </div>
   </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-    </nav>
-  </div>
+
   <main class="mdl-layout__content">
     <div class="page-content">
       <?php include 'application/views/'.$content_view; ?>

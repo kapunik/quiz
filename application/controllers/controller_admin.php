@@ -1,4 +1,5 @@
 <?php
+include_once 'application/models/model_main.php';
 
 class Controller_Admin extends Controller
 {
@@ -14,7 +15,15 @@ class Controller_Admin extends Controller
 		*/
 		if ( $_SESSION['admin'] == "12345" )
 		{
-			$this->view->generate('admin_view.php', 'admin_template_view.php');
+            $this->model = new Model_Main();
+            $games_data = $this->model->get_data();
+
+		    $data = [
+		        'title' => 'Quiz календарь',
+		        'highlight_menu' => 'events',
+                'games_data' => $games_data
+            ];
+			$this->view->generate('admin_dashboard_view.php', 'admin_template_view.php', $data);
 		}
 		else
 		{
