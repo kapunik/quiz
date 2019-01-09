@@ -9,13 +9,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="<?php echo $_SERVER['SERVER_NAME'] . '/site.webmanifest';?>">
     <link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
     <!--  материал стили и скрипты-->
-    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -29,6 +29,7 @@
     <title>Quiz</title>
 </head>
 <body>
+  <a href="/login/" id="login_link"><i class="material-icons"> lock </i></a >
 <?php include 'application/views/'.$content_view; ?>
 </body>
 </html>
