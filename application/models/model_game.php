@@ -72,5 +72,12 @@ class Model_Game extends Model
         return $data;
     }
 
+    public function get_last_number(){
 
+        $number = R::getAll('SELECT max(number) as max FROM games');
+        $last_number = $number[0]['max'];
+        $last_number++;
+
+        return $last_number;
+    }
 }

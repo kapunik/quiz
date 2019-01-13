@@ -6,7 +6,7 @@ require_once 'brain/controller.php';
 
 require_once 'brain/rb.php';
 
-require_once 'brain/route.php';
+require_once 'brain/Route.php';
 
 
 

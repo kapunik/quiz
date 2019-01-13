@@ -1,5 +1,6 @@
 <?php
 include_once 'application/models/model_main.php';
+include_once 'application/models/model_game.php';
 
 class Controller_Admin extends Controller
 {
@@ -32,6 +33,29 @@ class Controller_Admin extends Controller
 		}
 
 	}
+
+    function action_create(){
+        session_start();
+
+        if ( $_SESSION['admin'] == "12345" )
+        {
+            $this->model = new Model_Game();
+            $last_game_number = $this->model->get_last_number();
+
+            $data = [
+                'title' => 'Новый Quiz',
+                'highlight_menu' => 'create_game',
+                'game_number' => $last_game_number
+            ];
+
+            $this->view->generate('admin_createGame_view.php', 'admin_template_view.php', $data);
+        }
+        else
+        {
+        session_destroy();
+        Route::ErrorPage404();
+        }
+    }
 
 	// Действие для разлогинивания администратора
 	function action_logout()

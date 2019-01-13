@@ -12,5 +12,8 @@ class Controller_Game extends Controller
     {
         $data = $this->model->show_game($mod);
         $this->view->generate('game_view.php', 'template_view.php', $data);
+
     }
+
+
 }

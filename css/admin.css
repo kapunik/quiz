@@ -16,3 +16,44 @@
     flex-direction: row;
     align-items: center;
 }
+.create_game_layout{
+    display: flex;
+}
+.create_game_layout section{
+    margin-left: 20px;
+}
+.aside_menu{
+    display: inline-block;
+    background: #fff;
+    width: 100px;
+    box-sizing: border-box;
+    padding: 24px 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    z-index: 1;
+    border: none;
+}
+.aside_menu a{
+    margin: 10px 0 0 0;
+    padding: 0;
+    width: 56px;
+    height: 56px;
+}
+.aside_menu a:after{
+    height: 0 !important;
+}
+
+.game_main_setting{
+    display: inline-block;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding-bottom: 120px;
+}
+
+.game_main_setting form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}

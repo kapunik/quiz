@@ -23,7 +23,7 @@
                         <i class='material-icons'>create</i>
                     </button>
                     <div class='mdl-layout-spacer'></div>
-                    <button class='mdl-button mdl-js-button mdl-button--icon mdl-button--colored'>
+                    <button class='mdl-button mdl-js-button mdl-button--icon mdl-color-text--grey-700'>
                         <i class='material-icons'>delete_forever</i>
                     </button>
                     

@@ -44,7 +44,7 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="" title="Новый квиз"><i class="material-icons"> add_circle_outline </i></a>
+        <a class="mdl-navigation__link" href="/admin/create/" title="Новый квиз" id="create_game"><i class="material-icons"> add_circle_outline </i></a>
         <a class="mdl-navigation__link" href="/admin/" title="Кадендарь" id="events"><i class="material-icons"> dashboard </i></a>
         <a class="mdl-navigation__link" href="" title="WTF?!"><i class="material-icons"> help_outline </i></a>
         <a class="mdl-navigation__link" href="/admin/logout/" title="Выход"><i class="material-icons"> exit_to_app </i></a>
