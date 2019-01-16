@@ -80,4 +80,27 @@ class Model_Game extends Model
 
         return $last_number;
     }
+
+    public function show_round_info($game, $round){
+        $data = R::find('rounds', 'games_id = ? and number = ?', array($game, $round));
+
+        return $data;
+    }
+
+    public function show_answer($game, $round, $question){
+        $round_data = R::findOne('rounds', 'games_id = ? and number = ?', array($game, $round));
+        $round_id = $round_data->id;
+        $question_data = R::findOne('questions', 'rounds_id = ? and number = ?', array($round_id, $question));
+        $data = [
+            'game_number' => $game,
+            'round_number' => $round,
+            'question_number' => $question_data->number,
+            'question_type' => $question_data->type,
+            'question_description' => $question_data->description,
+            'question_timer' => $question_data->timer,
+            'question_answers' => $question_data->ownAnswersList
+        ];
+        return $data;
+    }
+
 }

@@ -16,4 +16,26 @@ class Controller_Game extends Controller
     }
 
 
+    /**
+     * @param $mod - string;
+     */
+    function action_play($mod){
+//        разобьем принятую строку на переменные
+        list($game, $round, $question) = explode('-', $mod);
+
+//        если третий параметр пустой - пошлем нахуй
+        if($question == NULL){ Route::ErrorPage404(); };
+
+//        если там "инфо" - покажем описание раунда
+        if($question == 'info') {
+            $data = $this->model->show_round_info($game, $round);
+        }
+
+//        если там число - покажем сопсно вопрос
+        if(is_numeric($question)) {
+            $data = $this->model->show_answer($game, $round, $question);
+        }
+
+        $this->view->generate('play_view.php', 'template_view.php', $data);
+    }
 }
