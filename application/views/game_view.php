@@ -61,7 +61,7 @@ echo "
 </div> 
 
 <div id='add_team'><span class='tomato'>+<span> Добавить команду </div>
-<div class='play play_round'><span class='icon-play'></span></div>
+<a href='/game/play/{$data['game_number']}-1-info' class='play play_round'><span class='icon-play'></span></a>
         </div>
     </div>
     
