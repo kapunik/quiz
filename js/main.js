@@ -36,12 +36,20 @@ $(document).ready(function() {
     setTimeout(function() {
       clearInterval(timerId);
         $('.timer').addClass('spartak');
+        $('.description, .answers, .timer').css('display', 'none');
+        $('.deadline').css('display', 'flex');
     }, stop);
 
   }
 
   $('.timer').on('click', function() {
-    timer_start(30);
+    timer_start(3);
   });
+
+  $('html').keydown(function(eventObject){
+  if(eventObject.which == '32'){
+    timer_start(3);
+  };
+});
 
 });
