@@ -29,13 +29,19 @@ class Controller_Game extends Controller
 //        если там "инфо" - покажем описание раунда
         if($question == 'info') {
             $data = $this->model->show_round_info($game, $round);
+            $this->view->generate('play_view.php', 'template_view.php', $data);
         }
 
 //        если там число - покажем сопсно вопрос
         if(is_numeric($question)) {
             $data = $this->model->show_answer($game, $round, $question);
+            $this->view->generate('play_view.php', 'template_view.php', $data);
         }
 
-        $this->view->generate('play_view.php', 'template_view.php', $data);
+        if($question == 'result') {
+            $this->view->generate('result_round_view.php', 'template_view.php');
+        }
+
+
     }
 }
