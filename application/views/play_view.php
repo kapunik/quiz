@@ -1,6 +1,12 @@
+<style>
+    .alarm {
+        animation: timer_alarm <?= $data['question_timer'] ?>s linear;
+    }
+</style>
+
 <?php
 if (!empty($data['question_timer'])){
-    echo "<div class='timer mel'> {$data['question_timer']}</div>";
+    echo "<div class='timer mel'>{$data['question_timer']}</div>";
 }
 ?>
 
@@ -37,7 +43,11 @@ if (!empty($data['question_timer'])){
 </section>
 
     <div class="deadline">
-        <a href="/game/play/1-1-2">
+        <?php
+        $next_question_number = $data['question_number'] + 1;
+        $next_question = ($data['question_number'] == $data['question_count']) ? 'result' : $next_question_number;
+
+        echo "<a href='/game/play/{$data['game_number']}-{$data['round_number']}-{$next_question}'>"; ?>
             <button autofocus class="next_question deadline">Следующий вопрос!
             </button>
         </a>
