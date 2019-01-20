@@ -14,6 +14,7 @@
   <div class="list_questions">9</div>
   <div class="list_questions">10</div>
 </div>
+
 <div class="flex-column mel darken-transparent" style="width: 100%">
 <h1 class="star-gold">ИГРА 1 РАУНД 1</h1>
 <section class="description">
@@ -23,17 +24,16 @@
 </section>
 
 <section class="answers flex_wrap">
-  <div class="answer">ХУЙ</div>
-  <div class="answer">hui</div>
-  <div class="answer">hui</div>
-  <div class="answer">вышел саня из бытовки в бар пошел быхать конину</div>
+  <div class="answer">Один</div>
+  <div class="answer">Два</div>
+  <div class="answer">Три</div>
+  <div class="answer">Четыре</div>
 </section>
 
-<div class="deadline ">
-  <a href="/game/play/1-1-2" ><button autofocus class="next_question">  Следующий вопрос!</button></a>  
+<div class="deadline">
+  <a href="/game/play/1-1-2">
+    <button autofocus class="next_question deadline">Следующий вопрос!
+    </button>
+  </a>
 </div>
-
-
-
-
 </div>
