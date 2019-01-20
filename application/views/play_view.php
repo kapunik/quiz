@@ -7,20 +7,16 @@ if (!empty($data['question_timer'])){
 
 
 <div class="flex-column mel darken-transparent list">
-
-    <?php
-    echo "<div class='list_questions'><a href='/game/play/{$data['game_number']}-{$data['round_number']}-info'>I</a></div>";
-
-    $i = 1;
-
-    while($i <= $data['question_count']){
-        echo "<div class='list_questions'><a href='/game/play/{$data['game_number']}-{$data['round_number']}-{$i}'>{$i}</a></div>";
-        $i++;
-    };
-
-    echo "<div class='list_questions'><a href='/game/play/{$data['game_number']}-{$data['round_number']}-result'>R</a></div>";
-    ?>
-
+  <div class="list_questions">1</div>
+  <div class="list_questions">2</div>
+  <div class="list_questions">3</div>
+  <div class="list_questions">4</div>
+  <div class="list_questions">5</div>
+  <div class="list_questions">6</div>
+  <div class="list_questions">7</div>
+  <div class="list_questions">8</div>
+  <div class="list_questions">9</div>
+  <div class="list_questions">10</div>
 </div>
 <div class="flex-column mel darken-transparent" style="width: 100%">
 <h1 class="star-gold">ИГРА <?= $data['game_number'] ?> РАУНД <?= $data['round_number'] ?> ВОПРОС <?= $data['question_number'] ?></h1>
