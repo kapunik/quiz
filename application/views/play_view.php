@@ -1,37 +1,49 @@
-<div class="timer mel">
-30
-</div>
+<?php
+if (!empty($data['question_timer'])){
+    echo "<div class='timer mel'> {$data['question_timer']}</div>";
+}
+?>
+
+
 
 <div class="flex-column mel darken-transparent list">
-  <div class="list_questions">1</div>
-  <div class="list_questions">2</div>
-  <div class="list_questions">3</div>
-  <div class="list_questions">4</div>
-  <div class="list_questions">5</div>
-  <div class="list_questions">6</div>
-  <div class="list_questions">7</div>
-  <div class="list_questions">8</div>
-  <div class="list_questions">9</div>
-  <div class="list_questions">10</div>
+
+    <?php
+    echo "<div class='list_questions'><a href='/game/play/{$data['game_number']}-{$data['round_number']}-info'>I</a></div>";
+
+    $i = 1;
+
+    while($i <= $data['question_count']){
+        echo "<div class='list_questions'><a href='/game/play/{$data['game_number']}-{$data['round_number']}-{$i}'>{$i}</a></div>";
+        $i++;
+    };
+
+    echo "<div class='list_questions'><a href='/game/play/{$data['game_number']}-{$data['round_number']}-result'>R</a></div>";
+    ?>
+
 </div>
 <div class="flex-column mel darken-transparent" style="width: 100%">
-<h1 class="star-gold">ИГРА 1 РАУНД 1</h1>
+<h1 class="star-gold">ИГРА <?= $data['game_number'] ?> РАУНД <?= $data['round_number'] ?> ВОПРОС <?= $data['question_number'] ?></h1>
 <section class="description">
-  Проекция на подвижные оси представляет собой ультраосновной секстант. Момент сил, а там действительно могли быть видны звезды, о чем свидетельствует Фукидид искажает словесный сброс. Обсценная идиома трансформирует одиннадцатисложник, несмотря на отсутствие единого пунктуационного алгоритма.
-
-Векторная форма жизненно интегрирует мелодический восход . Стихотворение типично. Отсутствие трения меняет центральный оз.
+    <?= $data['description'] ?>
 </section>
 
 <section class="answers flex_wrap">
-  <div class="answer">ХУЙ</div>
-  <div class="answer">hui</div>
-  <div class="answer">hui</div>
-  <div class="answer">вышел саня из бытовки в бар пошел быхать конину</div>
+    <?php
+    if(!empty($data['question_answers'])){
+        foreach ($data['question_answers'] as $answer){
+            echo "<div class='answer'> <span class='star-silver'>{$answer['number']}. </span> {$answer['description']}</div>";
+        };
+    }
+    ?>
 </section>
 
-<div class="deadline ">
-  <a href="/game/play/1-1-2" ><button autofocus class="next_question">  Следующий вопрос!</button></a>  
-</div>
+    <div class="deadline">
+        <a href="/game/play/1-1-2">
+            <button autofocus class="next_question deadline">Следующий вопрос!
+            </button>
+        </a>
+    </div>
 
 
 

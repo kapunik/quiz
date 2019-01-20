@@ -82,7 +82,19 @@ class Model_Game extends Model
     }
 
     public function show_round_info($game, $round){
-        $data = R::find('rounds', 'games_id = ? and number = ?', array($game, $round));
+        $round_data = R::findOne('rounds', 'games_id = ? and number = ?', array($game, $round));
+        $round_id = $round_data->id;
+        $question_count = R::count('questions', 'rounds_id = ?', [$round_id]);
+        $data = [
+            'game_number' => $game,
+            'round_number' => $round,
+            'question_number' => '',
+            'question_type' => '',
+            'description' => $round_data->description,
+            'question_timer' => '',
+            'question_answers' => '',
+            'question_count' => $question_count
+        ];
 
         return $data;
     }
@@ -91,14 +103,16 @@ class Model_Game extends Model
         $round_data = R::findOne('rounds', 'games_id = ? and number = ?', array($game, $round));
         $round_id = $round_data->id;
         $question_data = R::findOne('questions', 'rounds_id = ? and number = ?', array($round_id, $question));
+        $question_count = R::count('questions', 'rounds_id = ?', [$round_id]);
         $data = [
             'game_number' => $game,
             'round_number' => $round,
             'question_number' => $question_data->number,
             'question_type' => $question_data->type,
-            'question_description' => $question_data->description,
+            'description' => $question_data->description,
             'question_timer' => $question_data->timer,
-            'question_answers' => $question_data->ownAnswersList
+            'question_answers' => $question_data->ownAnswersList,
+            'question_count' => $question_count
         ];
         return $data;
     }

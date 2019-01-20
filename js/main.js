@@ -20,6 +20,8 @@ $(document).ready(function() {
     $('#btn_hide_aside').toggleClass('rotate180');
   });
 
+  var timer = $('.timer').html();
+  console.log(timer);
 
   function timer_start(sec) {
     $('.timer').addClass('alarm');
@@ -43,12 +45,12 @@ $(document).ready(function() {
   }
 
   $('.timer').on('click', function() {
-    timer_start(3);
+    timer_start(timer);
   });
 
   $('html').keydown(function(eventObject){
   if(eventObject.which == '32'){
-    timer_start(3);
+    timer_start(timer);
   };
 });
 
