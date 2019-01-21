@@ -475,8 +475,6 @@ tr td:nth-child(3){
   cursor: pointer;
 }
 
-
-
 .spartak {
   background-color: red;
   color:white;
@@ -530,4 +528,14 @@ tr td:nth-child(3){
   position: absolute;
   bottom: 20px;
   left: calc(50% - 100px);
+}
+
+.list_answers {
+  width: 40px;
+  height: 40px;
+  border:2px solid gold;
+  border-radius: 50%;
+  text-align:center;
+  margin:10px 0;
+  line-height: 40px;
 }
